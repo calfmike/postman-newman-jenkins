@@ -6,7 +6,7 @@
     "test": "tests"
   },
   "scripts": {
-    "StarWarsTest": "newman run tests/StarshipsCollection.postman_collection.json -e StarWars.postman_environment.json"
+    "StarWarsTest": "newman run tests/StarshipsCollection.postman_collection.json -e tests/StarWars.postman_environment.json"
   },
   "author": "Calfa",
   "dependencies": {
