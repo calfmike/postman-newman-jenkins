@@ -7,30 +7,75 @@
 	"item": [
 		{
 			"name": "Starship",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7ca82ead-9415-4e16-890e-da7b6b07bfc3",
+						"exec": [
+							"pm.test(\"Status code is 200\", function(){\r",
+							"\tpm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 500ms\", function(){\r",
+							"\tpm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});   \r",
+							"\r",
+							"pm.test(\"More than 5 Starships\", function() {\r",
+							"\tpm.expect(pm.response.json().results).to.have.length.Of.above(5);\r",
+							"})    "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
 				"url": {
-					"raw": ""
+					"raw": "{{host}}/starships",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"starships"
+					]
 				}
 			},
 			"response": []
 		},
 		{
 			"name": "Planets",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "447bbf93-219c-4d56-8465-6160ca57f48e",
+						"exec": [
+							"pm.test(\"Status code is 200\", function(){\r",
+							"\tpm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Response time is less than 500ms\", function(){\r",
+							"\tpm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
 				"url": {
-					"raw": ""
+					"raw": "{{host}}/planets",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"planets"
+					]
 				}
 			},
 			"response": []
