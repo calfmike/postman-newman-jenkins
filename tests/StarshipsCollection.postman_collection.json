@@ -14,7 +14,7 @@
 					"mode": "raw",
 					"raw": ""
 				},
-				"url": {{{host}}/starships
+				"url": {{host}/starships
 					"raw": ""
 				}
 			},
@@ -25,7 +25,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {{{host}}/starships
+				"body": {{host}/starships
 					"mode": "raw",
 					"raw": ""
 				},
