@@ -22,7 +22,7 @@
 							"});   \r",
 							"\r",
 							"pm.test(\"More than 5 Starships\", function() {\r",
-							"\tpm.expect(pm.response.json().results).to.have.length.Of.above(5);\r",
+							"\tpm.expect(pm.response.json().results).to.have.length.of.above(5);\r",
 							"})    "
 						],
 						"type": "text/javascript"
